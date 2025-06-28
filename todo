@@ -1,0 +1,9 @@
+# Add disko flake with btrfs support
+
+# gnome
+## remove excess packages
+## configure default settings for home-manager?
+## add declarations for extensions
+
+# flatpak
+## add flatpak nix support
