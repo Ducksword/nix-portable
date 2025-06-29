@@ -1,4 +1,5 @@
-# Add disko flake with btrfs support
+# make a just recipe that installs home-manager
+probably will have to chroot into install
 
 # gnome
 ## remove excess packages

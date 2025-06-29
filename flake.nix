@@ -1,6 +1,6 @@
 {
   inputs = {
-    # nixpkgs unstable
+    # nixpkgs
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # home-manager
@@ -10,19 +10,23 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: 
+  outputs = { self, nixpkgs, home-manager }: 
     let
       pkgs = nixpkgs.legacyPackages.${system};
       system = "x86_64-linux";
     in {
-      homeConfigurations."zach" = home-manager.lib.homeManagerConfiguration {
-        modules = [ ./home-manager/users/zach/home.nix ];
-        inherit pkgs;
-      };
+
+      # nixos configurations
       nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
         modules = [
           ./hosts/desktop/configuration.nix
         ];
+      };
+
+      # home configurations
+      homeConfigurations."zach" = home-manager.lib.homeManagerConfiguration {
+        modules = [ ./home-manager/users/zach/home.nix ];
+        inherit pkgs;
       };
     };
 }
