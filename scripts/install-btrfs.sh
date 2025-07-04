@@ -1,11 +1,13 @@
 #! /usr/bin/env bash
 DISK="/dev/sda"
 
+wipefs -a $DISK
+
 printf "label: gpt\n,550M,U\n,,L\n" | sfdisk $DISK
 
 # Make the filesystems and subvolumes
 mkfs.fat -F 32 $DISK"1"
-mkfs.btrfs $DISK"2"
+mkfs.btrfs -f $DISK"2"
 mkdir -p /mnt
 mount $DISK"2" /mnt
 btrfs subvolume create /mnt/root

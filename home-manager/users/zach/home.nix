@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.username = "zach";
@@ -30,6 +30,8 @@
         "editor.lineNumbers" = "relative";
         "explorer.compactFolders" = false;
         "git.autofetch" = true;
+        "nix.enableLanguageServer" = true;
+        "nix.serverPath" = "nixd";
       };
       extensions = with pkgs.vscode-extensions; [
         vscodevim.vim
@@ -39,11 +41,12 @@
         # Language support
         jnoortheen.nix-ide
         nefrob.vscode-just-syntax
+        mads-hartmann.bash-ide-vscode
       ];
     };
   };
   
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -60,9 +63,16 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    pkgs.just
-    pkgs.lazygit
-    pkgs.neovim 
+    ptyxis
+    wget
+
+    just
+    lazygit
+    nixd
+    bash-language-server
+    shellcheck
+
+    steam-devices-udev-rules
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

@@ -7,4 +7,12 @@ probably will have to chroot into install
 ## add declarations for extensions
 
 # flatpak
-## add flatpak nix support
+## add flatpak nix support has to piggy off of home-manager
+install after chroot
+    depends on home-manager
+add support for flatpak backup and restore
+
+```
+see if home-manager can manage a script that installs
+flatpak. if not just use a shell script that can be run anywhere.
+```
