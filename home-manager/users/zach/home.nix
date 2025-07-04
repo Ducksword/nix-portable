@@ -1,51 +1,13 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ../../modules
+    ../../packages
+  ];
   home.username = "zach";
   home.homeDirectory = "/home/zach";
 
-  programs.git = {
-    enable = true;
-    diff-highlight.enable = true;
-    userEmail = "Diabotek@proton.me";
-    userName = "ducksword";
-    extraConfig = {
-      init.defaultBranch = "main";
-    };
-  };
-
-  programs.vscode = {
-    enable = true;
-    profiles.default = {
-      enableExtensionUpdateCheck = false;
-      enableUpdateCheck = false;
-      userSettings = {
-        "workbench.editor.showTabs" = "single";
-        "editor.minimap.enabled" = false;
-        "editor.renderWhitespace" = "all";
-        "editor.suggest.selectionMode" = "whenTriggerCharacter";
-        "editor.quickSuggestions" = {
-          "other" = "off";
-        };
-        "editor.lineNumbers" = "relative";
-        "explorer.compactFolders" = false;
-        "git.autofetch" = true;
-        "nix.enableLanguageServer" = true;
-        "nix.serverPath" = "nixd";
-      };
-      extensions = with pkgs.vscode-extensions; [
-        vscodevim.vim
-        christian-kohler.path-intellisense
-        ms-vscode-remote.remote-ssh
-        ms-vscode-remote.remote-ssh-edit
-        # Language support
-        jnoortheen.nix-ide
-        nefrob.vscode-just-syntax
-        mads-hartmann.bash-ide-vscode
-      ];
-    };
-  };
-  
   home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
@@ -63,15 +25,6 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    ptyxis
-    wget
-
-    just
-    lazygit
-    nixd
-    bash-language-server
-    shellcheck
-
     steam-devices-udev-rules
   ];
 

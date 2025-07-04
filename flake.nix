@@ -10,7 +10,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager }: 
+  outputs = { nixpkgs, home-manager, self }: 
     let
       pkgs = nixpkgs.legacyPackages.${system};
       system = "x86_64-linux";

@@ -1,0 +1,5 @@
+{
+  imports = [
+    ./gui-dev.nix
+  ];
+}
