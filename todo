@@ -16,3 +16,6 @@ add support for flatpak backup and restore
 see if home-manager can manage a script that installs
 flatpak. if not just use a shell script that can be run anywhere.
 ```
+
+# System related
+Colors in man and less

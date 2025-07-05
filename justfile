@@ -21,6 +21,9 @@ desktop-switch:
 desktop-boot: hm-zach
 	sudo nixos-rebuild boot --flake .#desktop
 
+desktop-backup:
+	rsync -az /home/zach /mnt/backup --info=progress2 --exclude-from="./backupExcludes" --delete
+
 hm-zach:
 	home-manager switch --flake .#zach
-	flatpak update -yu
+#	flatpak update -yu

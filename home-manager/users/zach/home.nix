@@ -5,6 +5,14 @@
     ../../modules
     ../../packages
   ];
+
+  # modules
+  gui-dev.enable = true;
+
+  # packages
+  git.enable = true;
+  vscode.enable = true;
+
   home.username = "zach";
   home.homeDirectory = "/home/zach";
 
