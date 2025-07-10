@@ -1,15 +1,10 @@
-Bolt Launcher	com.adamcake.Bolt	0.17.0	stable	system
 Flatseal	com.github.tchx84.Flatseal	2.3.1	stable	system
 Alpaca	com.jeffser.Alpaca	6.1.7	stable	system
-TIDAL Hi-Fi	com.mastermindzh.tidal-hifi	5.19.0	stable	system
-OBS Studio	com.obsproject.Studio	31.0.3	stable	system
 Cemu	info.cemu.Cemu	2.6	stable	system
-Lutris	net.lutris.Lutris	0.5.18	stable	system
-Floorp	one.ablaze.floorp	11.28.0	stable	system
 Azahar	org.azahar_emu.Azahar	2122.1	stable	system
 Disk Usage Analyzer	org.gnome.baobab	48.0	stable	system
 KTorrent	org.kde.ktorrent	25.04.2	stable	system
 Raspberry Pi Imager	org.raspberrypi.rpi-imager	1.9.0	stable	system
-VLC	org.videolan.VLC	3.0.21	stable	system
-osu!	sh.ppy.osu	2025.607.0	stable	system
 Plex	tv.plex.PlexDesktop	1.109.0	stable	system
+
+spotify

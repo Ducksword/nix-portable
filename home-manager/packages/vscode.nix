@@ -9,18 +9,18 @@
         enableExtensionUpdateCheck = false;
         enableUpdateCheck = false;
         userSettings = {
-          "workbench.editor.showTabs" = "single";
+          "editor.lineNumbers" = "relative";
           "editor.minimap.enabled" = false;
           "editor.renderWhitespace" = "all";
           "editor.suggest.selectionMode" = "whenTriggerCharacter";
           "editor.quickSuggestions" = {
             "other" = "off";
           };
-          "editor.lineNumbers" = "relative";
           "explorer.compactFolders" = false;
           "git.autofetch" = true;
           "nix.enableLanguageServer" = true;
           "nix.serverPath" = "nixd";
+          "workbench.editor.showTabs" = "single";
         };
         extensions = with pkgs.vscode-extensions; [
           vscodevim.vim
@@ -29,8 +29,8 @@
           ms-vscode-remote.remote-ssh-edit
           # Language support
           jnoortheen.nix-ide
-          nefrob.vscode-just-syntax
           mads-hartmann.bash-ide-vscode
+          nefrob.vscode-just-syntax
         ];
       };
     };

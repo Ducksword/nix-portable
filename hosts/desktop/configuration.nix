@@ -11,6 +11,15 @@
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  services.openssh = {
+    enable = true;
+    passwordAuthentication = true;
+  };
+
+  # zramSwap = {
+  #   enable = true;
+  #   memoryPercent = 25;
+  # };
 
   # btrfs mount options
   fileSystems = {
@@ -48,6 +57,17 @@
   # flatpak
   services.flatpak.enable = true;
 
+  # virtualization
+  ## virtmanager
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
+  # Enable firmware updates
+  services.fwupd.enable = true;
+
+  # Trusts user for remote rebuild
+  nix.settings.trusted-users = [ "@wheel" ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -83,10 +103,7 @@
     isNormalUser = true;
     description = "zach";
     initialPassword = "123";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
   };
 
   # Allow unfree packages
@@ -96,6 +113,9 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     kdePackages.partitionmanager
+
+    fzf
+    fzf-zsh
   ];
 
   fileSystems."/mnt/backup" = {

@@ -8,20 +8,37 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # nixos-hardware
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware/master";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, self }: 
+  outputs = { nixpkgs, home-manager, nixos-hardware, self }: 
     let
       pkgs = nixpkgs.legacyPackages.${system};
       system = "x86_64-linux";
     in {
 
       # nixos configurations
+      ## desktop
       nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
         modules = [
           ./hosts/desktop/configuration.nix
         ];
       };
+
+      ## surface 
+      nixosConfigurations.surface = nixpkgs.lib.nixosSystem {
+        modules = [
+          ./hosts/surface/configuration.nix
+
+          # for surface kernel
+          nixos-hardware.nixosModules.microsoft-surface-common
+        ];
+      };
+
 
       # home configurations
       homeConfigurations."zach" = home-manager.lib.homeManagerConfiguration {

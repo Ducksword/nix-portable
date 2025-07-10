@@ -8,6 +8,7 @@
       wget
       just
       lazygit
+      vim
     ];
   };
 }
