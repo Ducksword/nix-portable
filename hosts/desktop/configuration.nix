@@ -13,7 +13,9 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   services.openssh = {
     enable = true;
-    passwordAuthentication = true;
+    settings = {
+      PasswordAuthentication = true;
+    };
   };
 
   # zramSwap = {
@@ -61,6 +63,8 @@
   ## virtmanager
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
+  ## uefi support
+  systemd.tmpfiles.rules = [ "L+ /var/lib/qemu/firmware - - - - ${pkgs.qemu}/share/qemu/firmware" ];
 
   # Enable firmware updates
   services.fwupd.enable = true;
@@ -116,6 +120,10 @@
 
     fzf
     fzf-zsh
+
+    # virtualization
+    qemu
+    quickemu
   ];
 
   fileSystems."/mnt/backup" = {
