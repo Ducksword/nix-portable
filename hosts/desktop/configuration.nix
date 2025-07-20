@@ -11,12 +11,15 @@
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  services.openssh = {
-    enable = true;
-    settings = {
-      PasswordAuthentication = true;
-    };
-  };
+  # services.openssh = {
+  #   enable = true;
+  #   settings = {
+  #     PasswordAuthentication = true;
+  #   };
+  # };
+
+  # enable qmk hardware
+  hardware.keyboard.qmk.enable = true;
 
   # zramSwap = {
   #   enable = true;

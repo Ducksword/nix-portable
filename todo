@@ -1,6 +1,3 @@
-# make a just recipe that installs home-manager
-probably will have to chroot into install
-
 # gnome
 ## remove excess packages
 ## configure default settings for home-manager?
@@ -19,3 +16,12 @@ flatpak. if not just use a shell script that can be run anywhere.
 
 # System related
 Colors in man and less
+
+# Borg
+setup borg backup
+    look into different backup options
+    especially with flatpaks
+    ie: different backup paths for different flatpaks
+
+reinstall on main os
+    make sure to properly setup password
