@@ -22,7 +22,7 @@ update:
 	nix flake update
 	just desktop-boot
 	nixos-rebuild build --no-build-output --flake .#surface
-	rm resault
+	rm result
 
 gc:
 	sudo nix-collect-garbage -d

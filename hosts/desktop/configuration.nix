@@ -36,6 +36,7 @@
   # kde
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+  hardware.bluetooth.enable = true;
 
     # Enable CUPS to print documents.
     services.printing.enable = true;
@@ -63,11 +64,15 @@
   services.flatpak.enable = true;
 
   # virtualization
-  ## virtmanager
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
-  ## uefi support
-  systemd.tmpfiles.rules = [ "L+ /var/lib/qemu/firmware - - - - ${pkgs.qemu}/share/qemu/firmware" ];
+  # ## virtmanager
+  # virtualisation.libvirtd.enable = true;
+  # programs.virt-manager.enable = true;
+  # ## uefi support
+  # systemd.tmpfiles.rules = [ "L+ /var/lib/qemu/firmware - - - - ${pkgs.qemu}/share/qemu/firmware" ];
+  ## virtual-box
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
+  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
 
   # Enable firmware updates
   services.fwupd.enable = true;
@@ -127,6 +132,9 @@
     # virtualization
     qemu
     quickemu
+
+    via
+    qmk
   ];
 
   fileSystems."/mnt/backup" = {
