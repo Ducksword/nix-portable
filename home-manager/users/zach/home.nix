@@ -1,10 +1,18 @@
 { config, pkgs, ... }:
 
 {
-  home.git.enable = true;
-  home.nvim.enable = true;
-  home.vim.enable = true;
-  home.vscode.enable = true;
+  home = {
+    git.enable = true;
+    nvim.enable = true;
+    tmux.enable = true;
+    vim.enable = true;
+    vscode.enable = true;
+    zsh.enable = true;
+  };
+
+  programs.bat = {
+    enable = true;
+  };
 
   home.packages = with pkgs;[
     ptyxis
