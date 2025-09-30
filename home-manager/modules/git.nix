@@ -1,8 +1,15 @@
-{ lib, config, ... }:
-{
-  options.git.enable = lib.mkEnableOption "enable git";
+{ lib, config, pkgs, ... }:
 
-  config = lib.mkIf config.git.enable {
+let
+  cfg = config.home.git;
+in
+{
+  options = {
+    home.git.enable = lib.mkEnableOption 
+      "Enables home-manager git config";
+  };
+
+  config = lib.mkIf cfg.enable {
     programs.git = {
       enable = true;
       diff-highlight.enable = true;

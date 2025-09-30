@@ -1,5 +1,8 @@
 {
   imports = [
-    ./gui-dev.nix
+    ./git.nix
+    ./nvim.nix
+    ./vim.nix
+    ./vscode.nix
   ];
 }

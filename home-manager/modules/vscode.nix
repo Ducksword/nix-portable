@@ -1,8 +1,16 @@
 { pkgs, lib, config, ... }:
-{
-  options.vscode.enable = lib.mkEnableOption "enable vscode";
 
-  config = lib.mkIf config.vscode.enable {
+let
+  cfg = config.home.vscode;
+
+in
+{
+  options = {
+    home.vscode.enable = lib.mkEnableOption 
+      "enable home-manager vscode";
+  };
+
+  config = lib.mkIf cfg.enable {
     programs.vscode = {
       enable = true;
       profiles.default = {

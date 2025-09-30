@@ -22,11 +22,14 @@
     in {
 
       # nixos configurations
+      ## craptop
+      nixosConfigurations.craptop = nixpkgs.lib.nixosSystem {
+        modules = [ ./hosts/craptop/configuration.nix ];
+      };
+
       ## desktop
       nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
-        modules = [
-          ./hosts/desktop/configuration.nix
-        ];
+        modules = [ ./hosts/desktop/configuration.nix ];
       };
 
       ## surface 

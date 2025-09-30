@@ -9,14 +9,17 @@ sudo nix run 'github:nix-community/disko/latest#disko-install' --  --experimenta
 
 # How to make custom options
 ```
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
+
 let
-  cfg = config.name;
+  cfg = config.NAME;
 in
 {
-  options.NAME.enable = lib.mkEnableOption "enable NAME";
+  options = {
+    NAME.enable = lib.mkEnableOption "enable NAME";
+  };
 
-  config = lib.mkIf config.NAME.enable {
+  config = lib.mkIf cfg.enable {
 
   };
 }

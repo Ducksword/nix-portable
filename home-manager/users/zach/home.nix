@@ -1,31 +1,23 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
-  imports = [
-    ../../modules
-    ../../packages
-  ];
+  home.git.enable = true;
+  home.nvim.enable = true;
+  home.vim.enable = true;
+  home.vscode.enable = true;
 
-  # modules
-  gui-dev.enable = true;
-
-  # packages
-  git.enable = true;
-  vscode.enable = true;
-
-  home.username = "zach";
-  home.homeDirectory = "/home/zach";
-
-  home.packages = with pkgs; [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    # pkgs.hello
+  home.packages = with pkgs;[
+    ptyxis
+    lazygit
+    fzf
+    just
+    wget
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+    # #(pkgs.nerdfonts.override { fonts = [ "UbuntuSansMono" ]; })
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -33,7 +25,6 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    steam-devices-udev-rules
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -72,7 +63,13 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+  imports = [
+    ../../modules
+  ];
 
-  home.stateVersion = "25.05"; # Please read the comment before changing.
+  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  home.username = "zach";
+  home.homeDirectory = "/home/zach";
+  home.stateVersion = "25.05"; # Please read the comment before changing.
 }
