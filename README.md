@@ -16,7 +16,8 @@ let
 in
 {
   options = {
-    NAME.enable = lib.mkEnableOption "enable NAME";
+    NAME.enable = lib.mkEnableOption 
+      "enable NAME";
   };
 
   config = lib.mkIf cfg.enable {

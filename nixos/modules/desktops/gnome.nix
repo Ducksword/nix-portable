@@ -1,11 +1,15 @@
 { lib, config, pkgs, ... }:
-{
-  options.gnome.enable = lib.mkEnableOption "enable gnome";
+let
+  cfg = config.desktop.gnome;
 
-  config = lib.mkIf config.gnome.enable {
-   # imports = [
-   #   ./core.nix
-   # ];
+in
+{
+  options = {
+    desktop.gnome.enable = lib.mkEnableOption 
+      "enable gnome";
+  };
+
+  config = lib.mkIf cfg.enable {
 
     # Enables gnome desktop
     services.displayManager.gdm.enable = true;
@@ -27,18 +31,23 @@
     environment.gnome.excludePackages = with pkgs; [
       decibels
       epiphany
+      geary
+      gnome-calendar
+      gnome-connections
       gnome-contacts
-      gnome-text-editor
       gnome-maps
       gnome-music
+      gnome-text-editor
+      gnome-tour
       gnome-weather
       simple-scan
+      snapshot
       totem
     ];
 
     # Fonts
     fonts.packages = with pkgs; [
-      nerd-fonts.ubuntu-mono
+      nerd-fonts.ubuntu-sans
     ];
   };
 }

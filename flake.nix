@@ -24,18 +24,18 @@
       # nixos configurations
       ## craptop
       nixosConfigurations.craptop = nixpkgs.lib.nixosSystem {
-        modules = [ ./hosts/craptop/configuration.nix ];
+        modules = [ ./nixos/hosts/craptop/configuration.nix ];
       };
 
       ## desktop
       nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
-        modules = [ ./hosts/desktop/configuration.nix ];
+        modules = [ ./nixos/hosts/desktop/configuration.nix ];
       };
 
       ## surface 
       nixosConfigurations.surface = nixpkgs.lib.nixosSystem {
         modules = [
-          ./hosts/surface/configuration.nix
+          ./nixos/hosts/surface/configuration.nix
 
           # for surface kernel
           nixos-hardware.nixosModules.microsoft-surface-common
