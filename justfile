@@ -6,6 +6,9 @@ hms:
 
 update:
 	nix flake update
+	just boot
+	just hms
+
 switch:
 	sudo nixos-rebuild switch --flake .
 boot:
@@ -14,19 +17,13 @@ gc:
 	sudo nix-collect-garbage -d
 	nix-collect-garbage -d
 
-install-btrfs:
-	./scripts/install-btrfs.sh
-
-install-nixos-desktop: install-btrfs
+install-nixos-desktop: 
 	nixos-generate-config --show-hardware-config --root /mnt > ./hosts/desktop/hardware-configuration.nix
 	nixos-install --no-root-password --no-channel-copy --flake .#desktop
 
 install-hm-zach:
 	nix run home-manager/master -- init --switch
 	home-manager switch --flake .#zach
-
-install-flatpak:
-	./scripts/install-flatpak.sh
 
 desktop-backup:
 	rsync -az /home/zach /mnt/backup --info=progress2 --exclude-from="./backupExcludes" --delete
