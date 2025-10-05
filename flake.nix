@@ -9,10 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # nixos-hardware
-    nixos-hardware = {
-      url = "github:NixOS/nixos-hardware/master";
-    };
+   #  # nixos-hardware
+   #  nixos-hardware = {
+   #    url = "github:NixOS/nixos-hardware/master";
+   #  };
   };
 
   outputs = { nixpkgs, home-manager, nixos-hardware, self }: 
@@ -28,19 +28,19 @@
       };
 
       ## desktop
-      nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
-        modules = [ ./nixos/hosts/desktop/configuration.nix ];
-      };
+      # nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
+      #   modules = [ ./nixos/hosts/desktop/configuration.nix ];
+      # };
 
       ## surface 
-      nixosConfigurations.surface = nixpkgs.lib.nixosSystem {
-        modules = [
-          ./nixos/hosts/surface/configuration.nix
+      # nixosConfigurations.surface = nixpkgs.lib.nixosSystem {
+      #   modules = [
+      #     ./nixos/hosts/surface/configuration.nix
 
-          # for surface kernel
-          nixos-hardware.nixosModules.microsoft-surface-common
-        ];
-      };
+      #     # for surface kernel
+      #     nixos-hardware.nixosModules.microsoft-surface-common
+      #   ];
+      # };
 
 
       # home configurations

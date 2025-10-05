@@ -25,6 +25,7 @@ in
       sessionVariables = {};
       shellAliases = {
         ls = "ls -a --color";
+        lg = "lazygit";
       };
       syntaxHighlighting = {
         enable = true;
