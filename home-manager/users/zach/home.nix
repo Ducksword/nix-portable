@@ -3,6 +3,7 @@
 {
   home = {
     git.enable = true;
+    lsp.enable = true;
     nvim.enable = true;
     tmux.enable = true;
     vim.enable = true;

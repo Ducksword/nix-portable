@@ -53,12 +53,5 @@ in
         ];
       };
     };
-
-    home.packages = with pkgs; [
-      # Language servers
-      nixd
-      bash-language-server
-      shellcheck
-    ];
   };
 }
