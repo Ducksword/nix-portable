@@ -44,6 +44,8 @@ in
           christian-kohler.path-intellisense
           ms-vscode-remote.remote-ssh
           ms-vscode-remote.remote-ssh-edit
+          # Themes
+          # fabiospampinato.vscode-monokai-night
           # Language support
           jnoortheen.nix-ide
           mads-hartmann.bash-ide-vscode

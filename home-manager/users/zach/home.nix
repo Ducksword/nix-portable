@@ -6,7 +6,7 @@
     nvim.enable = true;
     tmux.enable = true;
     vim.enable = true;
-    vscode.enable = true;
+    vscode.enable = false;
     zsh.enable = true;
   };
 
@@ -15,6 +15,7 @@
   };
 
   targets.genericLinux.enable = true;
+  programs.bash.enable = true;
 
   home.packages = with pkgs;[
     ptyxis
