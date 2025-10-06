@@ -1,0 +1,82 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/zach/git/nix-portable/home-manager/" . "modules/")
+ ("/home/zach/git/nix-portable/" . "home-manager/")
+ ("/home/" . "zach/")
+ ("/home/zach/.emacs.d/" . "elpa/")
+ ("/home/zach/git/" . "nix-portable/")
+ ("/home/zach/" . ".emacs.d/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/zach/.emacs.d/"
+ "/home/zach/git/nix-portable/home-manager/modules/"
+ "/home/zach/git/home-manager/"
+ "/home/zach/git/elm/"
+ "/home/zach/git/py-testing-plate/"
+ "/home/zach/git/nix/"
+ "/home/zach/git/c/"
+ "/home/zach/git/btopNix/"
+ "/home/zach/.emacs.d/elpa/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "init.el"
+ "nvim.nix"
+ "home.nix"
+ "elm"
+ "treasure-island.py"
+ "LICENSE"
+ "flake.nix"
+ "pizza.py"
+ "hello.c"
+ "btop.nix"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/zach/.emacs.d/" (26852 10535 841197 976000) "init.el" "init.el~" "ido.last" "ido.last~" "tree-sitter/" "amx-items" "eln-cache/" "elpa/" "auto-save-list/" "../" "./")
+
+ ("/home/zach/" (26852 9147 942870 302000) ".viminfo" ".swo" ".emacs.d/" ".zshrc" ".zshenv" ".wget-hsts" ".zsh_history" ".zcompdump-fedora-5.9.zwc" ".zcompdump-fedora-5.9" "justfile" ".profile" "TODO.md" ".python_history" ".spacemacs" ".spacemacs.env" ".ollama/" ".npm/" "Calibre Library/" ".bashrc" ".nix-profile/" ".nix-defexpr/" ".dotnet/" ".pki/" ".swp" ".rustup/" ".cargo/" ".vim/" ".elm/" ".ssh/" "git/" "Videos/" "Documents/" ".vscode/" ".var/" ".bash_history" "Pictures/" "Music/" "Public/" "Templates/" "Downloads/" "Desktop/" ".cache/" ".local/" ".config/" ".bash_profile" ".bash_logout" ".mozilla/" "../" "./")
+
+ ("/home/zach/git/nix-portable/home-manager/modules/" (26852 10362 118416 221000) ".#nvim.nix" "nvim.nix" "nvim/" "vim.nix" "zsh.nix" "default.nix" "tmux.nix" "vscode.nix" "git.nix" "../" "./")
+
+ ("/home/zach/git/nix-portable/home-manager/" (26843 14470 165684 513000) "users/" "modules/" "../" "./")
+
+ ("/home/zach/git/nix-portable/" (26852 4196 166606 82000) "todo" "justfile" "flake.nix" "flake.lock" "scripts/" "nixos/" "home-manager/" "backupExcludes" "README.md" ".git/" "../" "./")
+
+ ("/home/zach/git/" (26851 7728 810410 405000) "nix-portable/" ".dotfiles/" "c/" "home-manager/" "py-testing-plate/" "elm/" "btopNix/" "../" "./")
+
+ ("/home/zach/git/home-manager/" (26830 43864 605068 744000) "home.nix" "justfile" "README.md" "flake.nix" "flake.lock" ".git/" "../" "./")
+
+ ("/home/zach/git/elm/src/" (26823 27465 503212 82000) "main.elf" "../" "./")
+
+ ("/home/zach/git/elm/" (26823 27460 199231 495000) "Main.elm" "elm-stuff/" "elm.json" "src/" "elm" "../" "./")
+
+ ("/home/zach/git/rust/" (26785 3688 652220 4000) "target/" "Cargo.lock" "src/" "Cargo.toml" ".gitignore" ".git/" "../" "./")
+
+ ("/home/zach/git/btopNix/" (26823 27449 920269 121000) "result" "btop.nix" "default.nix" "../" "./")
+
+ ("/home/zach/git/c/" (26832 41830 61864 767000) "temp" "temperature.c" "hello.c" "../" "./")
+
+ ("/home/zach/git/py-testing-plate/" (26832 28339 202972 653000) "py-02.py" "treasure-island.py" "py-03.py" "py-01.py" "pizza.py" "necrotic-runes.py" "README.md" "LICENSE" ".git/" "../" "./")
+
+ ("/home/zach/.emacs.d/elpa/" (26827 19395 372042 837000) "tree-sitter-langs-20250915.20/" "tree-sitter-20220212.1632/" "amx-20230413.1210/" "ido-completing-read+-20240130.30/" "evil-20250812.1023/" "goto-chg-20240407.1110/" "archives/" "gnupg/" "../" "./")
+
+ ("/home/zach/git/nix/" (26827 18502 622027 425000) "scripts/" "modules/" "justfile" "hosts/" "flake.nix" "flake.lock" "TODO.md" "README.md" ".git/" "../" "./")
+
+ ("/home/zach/git/nix/hosts/" (26775 55387 191038 727000) "desktop/" "../" "./")
+
+ ("/home/zach/git/nix/hosts/desktop/" (26775 55387 191092 647000) "hardware-configuration.nix" "configuration.nix" "../" "./")
+
+ ("/home/zach/.emacs.d/elpa/nix-ts-mode-20250819.1504/" (26822 14236 573510 536000) "nix-ts-mode.elc" "nix-ts-mode-autoloads.el" "nix-ts-mode.el" "nix-ts-mode-pkg.el" "../" "./")
+
+ ("/home/" (26761 24704 0 0) "zach/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
