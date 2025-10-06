@@ -1,3 +1,21 @@
+# neovim
+#
+# lsp support <-- provide the lsp inside the neovim config
+#
+# See if there is an amx or ido mode for :e
+#
+# keybinds for file choosing
+#
+# compile mode
+#
+# git integration - or just use lazy?
+#
+# make keybind that :w :e .
+#
+# whitespace
+#
+# TODO follow vimjoyer nvim video, then his home-manager
+
 # gnome
 ## configure default settings for home-manager?
 

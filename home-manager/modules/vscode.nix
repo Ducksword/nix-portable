@@ -17,6 +17,12 @@ in
         enableExtensionUpdateCheck = false;
         enableUpdateCheck = false;
         userSettings = {
+          "git.enableSmartCommit" = true;
+          "git.confirmSync" = false;
+          "git.autofetch" = true;
+
+          "workbench.colorTheme" = "Monokai Night";
+          "workbench.editor.showTabs" = "single";
           "editor.lineNumbers" = "relative";
           "editor.minimap.enabled" = false;
           "editor.renderWhitespace" = "all";
@@ -24,11 +30,14 @@ in
           "editor.quickSuggestions" = {
             "other" = "off";
           };
+          "explorer.confirmDelete" = false;
           "explorer.compactFolders" = false;
-          "git.autofetch" = true;
+          "path-intellisense.showHiddenFiles" = true;
+
+          "terminal.integrated.defaultProfile.linux" = "zsh";
+
           "nix.enableLanguageServer" = true;
           "nix.serverPath" = "nixd";
-          "workbench.editor.showTabs" = "single";
         };
         extensions = with pkgs.vscode-extensions; [
           vscodevim.vim
@@ -44,6 +53,7 @@ in
     };
 
     home.packages = with pkgs; [
+      # Language servers
       nixd
       bash-language-server
       shellcheck
