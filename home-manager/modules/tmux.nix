@@ -15,8 +15,7 @@ in
       keyMode = "vi";
       mouse = true;
       terminal = "screen-256color";
-      ## TODO fix shell path for home-manager
-      # shell = "/home/zach/.nix-profile/bin/zsh";
+      shell = "/home/zach/.nix-profile/bin/zsh";
     };
   };
 }

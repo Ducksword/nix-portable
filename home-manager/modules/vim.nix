@@ -1,4 +1,4 @@
-{ lib, config, pkgs, ... }:
+{ config, lib, ... }:
 
 let
   cfg = config.home.vim;
@@ -6,19 +6,21 @@ let
 in
 {
   options = {
-    home.vim.enable = lib.mkEnableOption 
-      "enable home-manager vim config";
+    home.vim.enable =
+      lib.mkEnableOption
+      "Enable Vim home-manager configuration";
   };
 
   config = lib.mkIf cfg.enable {
     programs.vim = {
       enable = true;
+      defaultEditor = true;
       extraConfig = ''
-	colorscheme sorbet
+        colorscheme sorbet
         set mouse=a
-	set relativenumber
-	set number
-      '';
+        set relativenumber
+        set number
+      ''; 
     };
   };
 }

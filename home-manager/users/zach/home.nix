@@ -6,7 +6,7 @@
     nvim.enable = true;
     tmux.enable = true;
     vim.enable = true;
-    vscode.enable = true;
+    vscode.enable = false;
     zsh.enable = true;
   };
 
