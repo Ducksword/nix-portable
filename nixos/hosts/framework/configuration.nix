@@ -7,6 +7,8 @@
 {
   networking.hostName = "framework"; # Define your hostname.
 
+  services.flatpak.enable = true;
+
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
 

@@ -7,7 +7,7 @@
     nvim.enable = true;
     tmux.enable = true;
     vim.enable = true;
-    vscode.enable = false;
+    vscode.enable = true;
     zsh.enable = true;
   };
 
@@ -21,8 +21,6 @@
     enableVteIntegration = true;
     profileExtra =
       ''
-      # export XDG_DATA_DIRS="$XDG_DATA_DIRS:/var/lib/flatpak/exports/share";
-      # export XDG_DATA_DIRS="$XDG_DATA_DIRS:/home/zach/.local/share/flatpak/exports/share";
       '';
   };
 

@@ -4,6 +4,9 @@ default:
 hms:
 	home-manager switch --flake .#zach
 
+fhms:
+	home-manager switch --flake .#zach-framework
+
 update:
 	nix flake update
 	just boot

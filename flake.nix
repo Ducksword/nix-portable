@@ -49,8 +49,15 @@
 
 
       # home configurations
+      ## Fedora - Standalone
       homeConfigurations."zach" = home-manager.lib.homeManagerConfiguration {
         modules = [ ./home-manager/users/zach/home.nix ];
+        inherit pkgs;
+      };
+
+      ## Framework
+      homeConfigurations."zach-framework" = home-manager.lib.homeManagerConfiguration {
+        modules = [ ./home-manager/users/zach-framework/home.nix ];
         inherit pkgs;
       };
     };
