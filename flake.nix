@@ -22,6 +22,11 @@
     in {
 
       # nixos configurations
+      ## framework
+      nixosConfigurations.framework = nixpkgs.lib.nixosSystem {
+        modules = [ ./nixos/hosts/framework/configuration.nix ];
+      };
+
       ## craptop
       nixosConfigurations.craptop = nixpkgs.lib.nixosSystem {
         modules = [ ./nixos/hosts/craptop/configuration.nix ];
