@@ -48,6 +48,7 @@ in
     # Fonts
     fonts.packages = with pkgs; [
       nerd-fonts.ubuntu-sans
+      nerd-fonts.ubuntu-mono
     ];
   };
 }

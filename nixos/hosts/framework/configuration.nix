@@ -11,6 +11,10 @@
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
+  networking.extraHosts = 
+  ''
+  192.168.0.22 gitea gitea
+  '';
 
   # Set your time zone.
   time.timeZone = "America/Detroit";
