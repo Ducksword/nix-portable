@@ -10,7 +10,7 @@ fhms:
 update:
 	nix flake update
 	just boot
-	just hms
+	just fhms
 
 switch:
 	sudo nixos-rebuild switch --flake .
