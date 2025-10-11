@@ -21,8 +21,7 @@
     enableVteIntegration = true;
     profileExtra =
       ''
-      # export XDG_DATA_DIRS="$XDG_DATA_DIRS:/var/lib/flatpak/exports/share";
-      # export XDG_DATA_DIRS="$XDG_DATA_DIRS:/home/zach/.local/share/flatpak/exports/share";
+      export NIX_PATH="$NIX_PATH:nixpkgs=flake:nixpkgs"
       '';
   };
 

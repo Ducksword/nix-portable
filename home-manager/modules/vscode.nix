@@ -41,9 +41,11 @@ in
         };
         extensions = with pkgs.vscode-extensions; [
           vscodevim.vim
+          vscode-icons-team.vscode-icons
           christian-kohler.path-intellisense
           ms-vscode-remote.remote-ssh
           ms-vscode-remote.remote-ssh-edit
+          ms-vscode.remote-explorer
           # Themes
           # fabiospampinato.vscode-monokai-night
           # Language support
