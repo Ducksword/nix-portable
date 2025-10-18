@@ -11,6 +11,7 @@ update:
 	nix flake update
 	just boot
 	just fhms
+	flatpak update -y
 
 switch:
 	sudo nixos-rebuild switch --flake .
