@@ -8,6 +8,7 @@ fhms:
 	home-manager switch --flake .#zach-framework
 
 update:
+	just gc
 	nix flake update
 	just boot
 	just fhms
