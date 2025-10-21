@@ -26,7 +26,7 @@
   };
 
   home.packages = with pkgs;[
-    ptyxis
+    # ptyxis
     lazygit
     fzf
     just

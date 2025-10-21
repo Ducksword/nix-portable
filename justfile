@@ -22,6 +22,9 @@ gc:
 	sudo nix-collect-garbage -d
 	nix-collect-garbage -d
 
+flake-update:
+	nix flake update
+
 install-nixos-desktop: 
 	nixos-generate-config --show-hardware-config --root /mnt > ./hosts/desktop/hardware-configuration.nix
 	nixos-install --no-root-password --no-channel-copy --flake .#desktop
